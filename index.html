@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#dceaf4">
+<title>A Special Invitation — Noctaria</title>
+<style>
+:root{--ice:#dceaf4;--blue:#9ebbd0;--deep:#47677e;--silver:#b7c8d3;--ink:#40596b;--cream:#fffdf8}
+*{box-sizing:border-box}
+body{margin:0;min-height:100svh;overflow-x:hidden;color:var(--ink);font-family:Georgia,'Times New Roman',serif;background:radial-gradient(ellipse at 50% 30%,#f9fcff 0,#e9f2f8 38%,#cbdce9 100%);display:grid;place-items:center;padding:28px 16px}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;opacity:.55;background:repeating-linear-gradient(125deg,transparent 0 90px,#fff5 91px 92px,transparent 93px 180px),radial-gradient(circle at 12% 18%,#fff 0 1px,transparent 2px),radial-gradient(circle at 82% 72%,#fff 0 1px,transparent 2px);background-size:auto,47px 53px,61px 67px}
+.snow{position:fixed;inset:0;pointer-events:none;overflow:hidden}
+.flake{position:absolute;top:-12px;color:#fff;opacity:.85;text-shadow:0 0 8px #fff;animation:fall linear infinite}
+@keyframes fall{to{transform:translate3d(25px,110vh,0) rotate(180deg)}}
+main{width:min(100%,780px);text-align:center;position:relative;z-index:1}
+.kicker{font:600 11px/1.5 Arial,sans-serif;letter-spacing:.34em;text-transform:uppercase;color:#7896aa;margin:0 0 13px}
+h1{font-size:clamp(32px,6vw,54px);font-weight:400;font-style:italic;margin:0;color:#55748a;text-shadow:0 2px #fff}
+.subtitle{font:12px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#819daf;margin:12px 0 30px}
+.stage{min-height:390px;display:grid;place-items:center;position:relative;perspective:1100px}
+.gift-button{border:0;background:transparent;cursor:pointer;padding:20px;position:relative;transition:transform .35s;outline-offset:8px}
+.gift-button:hover{transform:translateY(-7px)}
+.gift-button:focus-visible{outline:2px solid #6c91aa;border-radius:20px}
+.gift{width:min(66vw,330px);height:230px;position:relative;filter:drop-shadow(0 22px 18px #597b9633);transform-style:preserve-3d}
+.box-body{position:absolute;bottom:0;left:8%;width:84%;height:66%;border:1px solid #a8c2d3;border-radius:4px 4px 12px 12px;background:linear-gradient(110deg,#b9d1e1,#eef7fc 35%,#b4cbdc 70%,#dcebf4);box-shadow:inset 0 0 25px #fff9}
+.box-body:before{content:"";position:absolute;left:43%;width:14%;height:100%;background:linear-gradient(90deg,#b9c8d2,#f8fbfd 48%,#9fb3c1)}
+.box-lid{position:absolute;z-index:3;top:42px;left:3%;width:94%;height:52px;border:1px solid #a9c1d0;border-radius:5px;background:linear-gradient(#f8fcff,#b9d0df);transform-origin:12% 100%;transition:transform 1s cubic-bezier(.2,.75,.2,1),top 1s}
+.box-lid:before{content:"";position:absolute;left:43%;width:14%;height:100%;background:linear-gradient(90deg,#b9c8d2,#fff 48%,#9fb3c1)}
+.ribbon{position:absolute;z-index:4;left:43%;top:0;width:14%;height:100%;background:linear-gradient(90deg,#aabac5,#fff 48%,#a7b9c6);box-shadow:0 0 8px #fff9}
+.bow{position:absolute;z-index:5;top:-20px;left:50%;width:150px;height:70px;transform:translateX(-50%);transition:transform 1s}
+.bow:before,.bow:after{content:"";position:absolute;top:5px;width:68px;height:47px;border:7px solid #eaf2f7;border-radius:70% 12% 70% 15%;background:linear-gradient(135deg,#fff,#a9bfce);box-shadow:inset 0 0 0 1px #91a9b9}
+.bow:before{left:4px;transform:rotate(22deg)}.bow:after{right:4px;transform:scaleX(-1) rotate(22deg)}
+.knot{position:absolute;left:calc(50% - 13px);top:20px;width:26px;height:25px;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff,#a4b9c8);border:1px solid #8fa9ba}
+.seal{position:absolute;z-index:6;bottom:22px;left:50%;transform:translateX(-50%);width:43px;height:43px;border-radius:50%;display:grid;place-items:center;color:#f8fbff;font-size:19px;background:radial-gradient(circle at 35% 30%,#8eaec2,#4f7189);border:2px solid #e8f1f7;box-shadow:0 2px 7px #49667a66}
+.tap{font:11px Arial,sans-serif;letter-spacing:.2em;text-transform:uppercase;color:#66869b;margin-top:20px}
+.letter{position:absolute;z-index:2;width:min(88%,590px);min-height:340px;padding:35px clamp(22px,6vw,58px);background:linear-gradient(135deg,#fffefa,#f8f7f1);border:1px solid #c2d0d8;box-shadow:0 15px 45px #486a8030;opacity:0;transform:translateY(120px) scale(.88);pointer-events:none;transition:opacity .7s .4s,transform 1s .25s cubic-bezier(.18,.78,.22,1);background-image:linear-gradient(90deg,transparent 0 12px,#d9e4e9 13px,transparent 14px),linear-gradient(#fffefa,#f8f7f1)}
+.letter:before{content:"";position:absolute;inset:9px;border:1px solid #c6d3da;pointer-events:none}
+.letter:after{content:"✧  ❄  ✧";display:block;color:#9bb4c4;letter-spacing:.5em;font-size:13px;margin-top:20px}
+.letter h2{font-size:clamp(27px,5vw,39px);font-weight:400;font-style:italic;color:#58768a;margin:0 0 18px}
+.letter p{font-size:16px;line-height:1.8;margin:10px 0;color:#536a79}
+.letter .label{font:10px Arial,sans-serif;letter-spacing:.22em;text-transform:uppercase;color:#8aa4b5;margin-top:24px}
+.prizes{min-height:52px;text-align:left;padding:8px 10px;border-bottom:1px solid #c7d4dc;outline:none;color:#536a79}
+.prizes:focus{background:#eef5f8}
+.signature{font-style:italic;color:#7894a6!important;margin-top:20px!important}
+.open .gift-button{opacity:0;pointer-events:none;transform:scale(.75);transition:opacity .35s,transform .5s}
+.open .letter{opacity:1;transform:translateY(0) scale(1);pointer-events:auto;z-index:8}
+.open .box-lid{transform:translateY(-105px) rotate(-18deg);top:5px}
+.open .bow{transform:translate(-50%,-110px) rotate(-15deg);opacity:0}
+.controls{display:flex;justify-content:center;gap:12px;margin-top:18px;flex-wrap:wrap}
+.control{border:1px solid #9eb7c7;background:#ffffff80;color:#58768a;padding:10px 18px;border-radius:30px;font:11px Arial,sans-serif;letter-spacing:.12em;text-transform:uppercase;cursor:pointer}
+.control:hover{background:#fff}
+[hidden]{display:none!important}
+@media(max-width:520px){.stage{min-height:430px}.letter{padding:30px 25px;min-height:360px}.letter p{font-size:15px}.gift{height:210px}}
+@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+</style>
+</head>
+<body>
+<div class="snow" aria-hidden="true" id="snow"></div>
+<main id="scene">
+<p class="kicker">Noctaria · Winter 2026</p>
+<h1>A little winter surprise</h1>
+<p class="subtitle">An invitation awaits</p>
+<section class="stage" aria-label="Interactive winter invitation">
+<button class="gift-button" id="openGift" aria-label="Open the gift to reveal your invitation">
+<div class="gift" aria-hidden="true">
+<div class="box-body"><div class="ribbon"></div></div>
+<div class="box-lid"><div class="ribbon"></div></div>
+<div class="bow"><div class="knot"></div></div>
+<div class="seal">N</div>
+</div>
+<div class="tap">Tap the present to open</div>
+</button>
+<article class="letter" id="letter" aria-live="polite">
+<h2>A Special Invitation</h2>
+<p>You’ve been invited to participate in Noctaria’s 2026 Winter Advent Calendar.</p>
+<p>Join us for winter activities, special surprises, and a little seasonal magic.</p>
+<p class="label">Prizes include</p>
+<div class="prizes" contenteditable="true" role="textbox" aria-label="Add your prizes here" data-placeholder="Add prizes here…"></div>
+<p class="signature">With warmth and winter wishes,<br>Noctaria</p>
+</article>
+</section>
+<div class="controls">
+<button class="control" id="replay" hidden>Close &amp; replay</button>
+</div>
+</main>
+<script>
+const scene=document.getElementById('scene'),open=document.getElementById('openGift'),replay=document.getElementById('replay');
+function reveal(){scene.classList.add('open');open.setAttribute('aria-expanded','true');replay.hidden=false;document.getElementById('letter').focus?.({preventScroll:true})}
+function reset(){scene.classList.remove('open');open.setAttribute('aria-expanded','false');replay.hidden=true;open.focus()}
+open.addEventListener('click',reveal);replay.addEventListener('click',reset);
+const snow=document.getElementById('snow');
+for(let i=0;i<34;i++){const f=document.createElement('span');f.className='flake';f.textContent=i%4===0?'✧':'❄';f.style.left=(Math.random()*100)+'%';f.style.fontSize=(8+Math.random()*12)+'px';f.style.animationDuration=(9+Math.random()*14)+'s';f.style.animationDelay=(-Math.random()*20)+'s';snow.appendChild(f)}
+</script>
+</body>
+</html>
